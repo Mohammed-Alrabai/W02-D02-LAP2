@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 class="text-center">Info Product</h1>
+    <h1 class="text-center">All Product</h1>
+    <div class="d-flex flex-wrap">
+      <% for(let infoproduct of product) { %> <% if (infoproduct.id == id) { %>
+
+      <div class="m-4">
+        <div class="card" style="width: 300px">
+          <div class="card-body">
+            <div
+              class="d-flex flex-column align-items-center justify-content-center mx-auto">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  <span>product name :</span> <%= infoproduct.name %>
+                </li>
+                <li class="list-group-item">
+                  <span>price :</span><%= infoproduct.price %> <span>$</span>
+                </li>
+                <li class="list-group-item">
+                  <span>category :</span><%= infoproduct.category %>
+                </li>
+                <li class="list-group-item">
+                  <span>description :</span><%= infoproduct.description %>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% } %> <% } %>
+    </div>
+  </body>
+</html>
